@@ -3,16 +3,17 @@
         => Contains key-value pairs of data submitted in the request body.
 */
 
-const express = require("express");
+const express = require('express');
+
 const app = express();
 
-app.use(express.json()) // for parsing application/json
+app.use(express.json()); // for parsing application/json
 
-app.post('/', function (req, res) {
-    console.log(req.body)
-    res.json(req.body)
-})
+app.post('/', (req, res) => {
+    console.log(req.body);
+    res.json(req.body);
+});
 
-app.listen(5050, ()=>{
-    console.log('Listenning to the 5050 port')
-})
+app.listen(5050, () => {
+    console.log('Listenning to the 5050 port');
+});

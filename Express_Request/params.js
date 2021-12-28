@@ -4,16 +4,16 @@
         containing properties.Into object, parameter value is string
 
 */
-const express = require("express");
+const express = require('express');
+
 const app = express();
 
-
-app.get('/user/:id', function (req, res) {
+app.get('/user/:id', (req, res) => {
     console.log(req.params); // return id number as a string
-    console.log(req.params.id) // we can extract beacuse it is object
+    console.log(req.params.id); // we can extract beacuse it is object
     res.end();
-})
+});
 
-app.listen(5050, ()=>{
-    console.log('Listenning to the 5050 port')
-})
+app.listen(5050, () => {
+    console.log('Listenning to the 5050 port');
+});
