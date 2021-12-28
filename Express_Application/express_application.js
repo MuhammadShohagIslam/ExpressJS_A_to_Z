@@ -150,6 +150,10 @@ const port = 5050;
 //         res.send(`This is Home Page For Express Application. ${app.locals.title}`);
 //         res.end();
 //     });
+/*
+    *** Template Engine ***
+        => If we want to show our html template, we can use this method
+*/
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
